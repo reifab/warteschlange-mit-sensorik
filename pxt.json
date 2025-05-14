@@ -4,7 +4,10 @@
     "dependencies": {
         "core": "*",
         "radio": "*",
-        "microphone": "*"
+        "microphone": "*",
+        "IoT-Cube": "github:Smartfeld/pxt-iot-cube#v1.1.2",
+        "pxt-SensorikSmartfeld": "github:Smartfeld/pxt-sensorikAktorikSmartfeld#afedb28fc56ab7111681d122d720b0c12e5d56a6",
+        "neopixel": "github:microsoft/pxt-neopixel#v0.7.6"
     },
     "files": [
         "main.blocks",

@@ -1,3 +1,11 @@
-basic.forever(function () {
-	
+smartfeldSensoren.initSunlight()
+smartfeldAktoren.oledInit(128, 64)
+let strip = neopixel.create(DigitalPin.P1, 16, NeoPixelMode.RGB)
+strip.setPixelColor(0, neopixel.colors(NeoPixelColors.White))
+strip.show()
+loops.everyInterval(1000, function () {
+    smartfeldAktoren.oledClear()
+    smartfeldAktoren.oledWriteNum(smartfeldSensoren.getHalfWord_Visible())
+    strip.rotate(1)
+    strip.show()
 })
