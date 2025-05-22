@@ -38,7 +38,7 @@ led_strip.setBrightness(255)
 let list_leermessungen = [0]
 let list_messungen = [0]
 list_leermessungen = messen()
-loops.everyInterval(200, function () {
+basic.forever(function () {
     personen = 0
     if (input.buttonIsPressed(Button.A)) {
         list_leermessungen = messen()
