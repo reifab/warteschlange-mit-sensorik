@@ -45,11 +45,11 @@ basic.forever(function () {
     } else {
         list_messungen = messen()
         smartfeldAktoren.oledClear()
-        for (let LedNr2 = 0; LedNr2 <= 3; LedNr2++) {
+        for (let LedNr = 0; LedNr <= 3; LedNr++) {
             let list_leermessungMinusMessung: number[] = []
-            list_leermessungMinusMessung[LedNr2] = list_leermessungen[LedNr2] - list_messungen[LedNr2]
-            smartfeldAktoren.oledWriteNumNewLine(list_leermessungMinusMessung[LedNr2])
-            if (list_leermessungMinusMessung[LedNr2] > 50) {
+            list_leermessungMinusMessung[LedNr] = list_leermessungen[LedNr] - list_messungen[LedNr]
+            smartfeldAktoren.oledWriteNumNewLine(list_leermessungMinusMessung[LedNr])
+            if (list_leermessungMinusMessung[LedNr] > 50) {
                 personen += 1
             }
         }
