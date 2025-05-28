@@ -63,7 +63,6 @@ led_strip.setBrightness(255)
 let list_leermessungen: number[] = []
 let list_messungen: number[] = []
 list_leermessungen = messen()
-let list_leermessungMinusMessung: number[] = []
 for (let index = 0; index < ANZAHL_LEDS; index++) {
     list_leermessungen.push(0)
     list_messungen.push(0)
