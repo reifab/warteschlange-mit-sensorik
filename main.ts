@@ -33,16 +33,16 @@ function messeHelligkeitsUnterschied (ledNr: number) {
 }
 function messen () {
     m_list = []
-    Led_Pos = ERSTE_LED_POS
+    LedPos = ERSTE_LED_POS
     for (let index = 0; index < ANZAHL_LEDS; index++) {
-        m_list.push(messeHelligkeitsUnterschied(Led_Pos))
-        Led_Pos += 1
+        m_list.push(messeHelligkeitsUnterschied(LedPos))
+        LedPos += 1
     }
     return m_list
 }
 let wertLeerMinusMessung = 0
 let personen = 0
-let Led_Pos = 0
+let LedPos = 0
 let m_list: number[] = []
 let h_unterschied = 0
 let h_mitLED = 0
