@@ -20,15 +20,15 @@ function messeMax () {
     return Math.round(maximum)
 }
 function messeHelligkeitsUnterschied (ledNr: number) {
-    led_strip.setPixelColor(ledNr, neopixel.colors(NeoPixelColors.Black))
-    led_strip.show()
+    strip.setPixelColor(ledNr, neopixel.colors(NeoPixelColors.Black))
+    strip.show()
     h_umgebung = messeMax()
-    led_strip.setPixelColor(ledNr, neopixel.colors(NeoPixelColors.White))
-    led_strip.show()
+    strip.setPixelColor(ledNr, neopixel.colors(NeoPixelColors.White))
+    strip.show()
     h_mitLED = messeMax()
     h_unterschied = h_mitLED - h_umgebung
-    led_strip.setPixelColor(ledNr, neopixel.colors(NeoPixelColors.Black))
-    led_strip.show()
+    strip.setPixelColor(ledNr, neopixel.colors(NeoPixelColors.Black))
+    strip.show()
     return h_unterschied
 }
 function messen () {
@@ -52,15 +52,15 @@ let ANZAHL_MESSUNGEN = 0
 let listPos = 0
 let stringMessung = ""
 let list_messungen: number[] = []
-let led_strip: neopixel.Strip = null
+let strip: neopixel.Strip = null
 let ERSTE_LED_POS = 0
 let ANZAHL_LEDS = 0
 smartfeldSensoren.initSunlight()
 ANZAHL_LEDS = 9
 ERSTE_LED_POS = 2
 smartfeldAktoren.oledInit(128, 64)
-led_strip = neopixel.create(DigitalPin.P1, ANZAHL_LEDS, NeoPixelMode.RGB_RGB)
-led_strip.setBrightness(255)
+strip = neopixel.create(DigitalPin.P1, 16, NeoPixelMode.RGB_RGB)
+strip.setBrightness(255)
 let list_leermessungen = messen()
 for (let index = 0; index < ANZAHL_LEDS; index++) {
     list_leermessungen.push(0)
