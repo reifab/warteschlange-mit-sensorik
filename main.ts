@@ -51,6 +51,7 @@ let maximum = 0
 let ANZAHL_MESSUNGEN = 0
 let listPos = 0
 let stringMessung = ""
+let list_messungen: number[] = []
 let led_strip: neopixel.Strip = null
 let ERSTE_LED_POS = 0
 let ANZAHL_LEDS = 0
@@ -60,9 +61,7 @@ ERSTE_LED_POS = 2
 smartfeldAktoren.oledInit(128, 64)
 led_strip = neopixel.create(DigitalPin.P1, ANZAHL_LEDS, NeoPixelMode.RGB_RGB)
 led_strip.setBrightness(255)
-let list_leermessungen: number[] = []
-let list_messungen: number[] = []
-list_leermessungen = messen()
+let list_leermessungen = messen()
 for (let index = 0; index < ANZAHL_LEDS; index++) {
     list_leermessungen.push(0)
     list_messungen.push(0)
