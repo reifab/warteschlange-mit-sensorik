@@ -58,7 +58,7 @@ smartfeldSensoren.initSunlight()
 ANZAHL_LEDS = 9
 ERSTE_LED_POS = 2
 smartfeldAktoren.oledInit(128, 64)
-led_strip = neopixel.create(DigitalPin.P1, 16, NeoPixelMode.RGB_RGB)
+led_strip = neopixel.create(DigitalPin.P1, ANZAHL_LEDS, NeoPixelMode.RGB_RGB)
 led_strip.setBrightness(255)
 let list_leermessungen: number[] = []
 let list_messungen: number[] = []
